@@ -1,0 +1,14 @@
+#foto_perfil{
+    width: 150px;
+    height: 150px;
+    border-radius:75px;
+    border:1px solid black;
+    box-shadow: 5px 5px 15px black;
+}
+hr{
+    width: 90%;
+    margin: 0;
+}
+h1,h3{
+    margin: 0;
+}

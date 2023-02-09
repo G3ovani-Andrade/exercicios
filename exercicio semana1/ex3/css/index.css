@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+body{
+    /*background: rgb(38,48,181);
+    background: radial-gradient(circle, rgba(38,48,181,1) 0%, rgba(3,7,22,1) 100%);*/
+    background: rgb(8, 14, 97);
+}
+#foto_perfil{
+    width: 150px;
+    height: 150px;
+    border-radius:75px;
+    border:1px solid black;
+    box-shadow: 5px 5px 15px black;
+}
+b{
+    font-weight: 900;
+}
+h3{
+    font-weight: 700;
+    color: #363636;
+}
+p,h1,h3{
+    color: #F5FFFA;
+}
+hr{
+    width: 90%;
+    margin: 0;
+}
+h1,h3{
+    margin: 0;
+}
+

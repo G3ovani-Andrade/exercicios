@@ -1,0 +1,44 @@
+.section-principal {
+  max-width: 700px;
+  width: 90%;
+  margin: 10px auto;
+}
+.carrinho {
+  background: #f5f5dc;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+}
+.tabela-carrinho {
+  border-spacing: 5px;
+  border-collapse: separate;
+}
+.img-carrinho {
+  width: 100px;
+}
+
+td {
+  vertical-align: middle;
+}
+.div-btn-carrinho {
+  width: 20%;
+}
+.flex-end {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.div-total {
+  margin-right: 1rem;
+}
+.flex-center {
+  margin: 0 auto;
+}
+.div-btn-carrinho input{
+  transition: background 0.3s;
+  padding: 4px 0;
+  background: #5fb382;
+  border: none;
+  width: 100%;
+  border-radius: 10px;
+}

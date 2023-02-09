@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+    <header>
+
+        <body>
+            <section>
+                <form action="">
+                    <div>
+                        <Label for="nome">Nome</Label>
+                        <input class="input-text" id="nome" type="text" id="nome" name="nome" required="required">
+                        <label for="sobrenome">sobrenome</label>
+                        <input class="input-text" id="sobrenome" type="text" name="sobrenome" required="required">
+                    </div>
+                    <div>
+                        <label for="peso" class="label-block">Peso</label>
+                        <input type="range" id="peso" nome="peso" min="0" value="0" max="300" oninput="display.value=value" onchange="display.value=value">
+
+                        <input type="text" class="input-text" id="display" value="0" oninput="peso.value=value" onchange="peso.value=value">
+
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input class="input-text" id="email" type="email" name="enail" required="required">
+                    </div>
+                    <div>
+                        <label for="data-nasc" class="label-block">Data de Nascimento</label>
+                        <input id="data-nasc" type="date" name="data-nasc" required="required">
+                    </div>
+                    <div>
+                        <label class="label-block" for="idade">Idade</label>
+                        <input id="idade" type="number" name="idade" min="1" max="30" required="required">
+                    </div>
+                    <div>
+                        <label for="sexo" class="label-block">Sexo</label>
+                        <select name="sexo" id="sexo" required="required">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="agendamento" class="label-block">Data Consulta</label>
+                        <input id="agendamento" type="datetime-local" name="agendamento" required="required">
+                    </div>
+                    <div>
+                        <label for="hora" class="label-block">hora</label>
+                        <input id="hora" type="time" name="hora" required="required">
+                    </div>
+                    <!--radio-->
+                    <div>
+                        <label for="Linguagens" class="label-block">Linguagens</label>
+                        <div class="div-radio">
+                            <input id="c#" type="radio" name="Linguagens" value="C#" required="required">
+                            <label for="c#">C#</label>
+                        </div>
+                        <div class="div-radio">
+                            <input id="php" type="radio" name="Linguagens" value="php">
+                            <label for="php">PHP</label>
+                        </div>
+                        <div class="div-radio">
+                            <input id="javascript" type="radio" name="Linguagens" value="javascript">
+                            <label for="javascript">Javascript</label>
+                        </div>
+                    </div>
+                    <!--checkbox-->
+                    <div>
+                        <label for="editores" class="label-block">Editores</label>
+                        <div class="div-radio">
+                            <input type="checkbox" id="sublime" name="editores" value="sublime">
+                            <label for="sublime">Sublime</label>
+                        </div>
+                        <div class="div-radio">
+                            <input type="checkbox" id="vsc" name="editores" value="vsc" checked>
+                            <label for="vsc">VSCODE</label>
+                        </div>
+                        <div class="div-radio">
+                            <input type="checkbox" id="note" name="editores" value="notePad++">
+                            <label for="note">notePad++</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="cor" class="label-block">Cor</label>
+                        <input type="color" id="cor" nome="cor" value="#FFFFFF" required="required">
+                    </div>
+                    <div>
+                        <label for="foto-perfil" class="label-block">Foto foto-perfil</label>
+                        <input type="file" id="foto-perfil" nome="foto" accept="image/png, image/jpeg"
+                            required="required">
+                    </div>
+                    <div>
+                        <label for="mensagem" class="label-block">Mensagem</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="6"
+                            placeholder="Fale um pouco sobre você" required="required"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Enviar">
+                    </div>
+
+                </form>
+            </section>
+        </body>
+    </header>
+</body>
+
+</html>
