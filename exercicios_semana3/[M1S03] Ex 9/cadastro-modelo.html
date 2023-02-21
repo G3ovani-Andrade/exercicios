@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Modelo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/css.css">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <nav>
+                <ul class="flex-center">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="cadastro-marca.html">Marca</a></li>
+                    <li><a href="cadastro-modelo.html">Modelo</a></li>
+                    <li><a href="cadastro-veiculo.html">Veículo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="principal">
+            <h1>Cadastro de Modelo</h1>
+            <form class="flex-center">
+                <label for="nomeModelo" >Nome da Modelo</label>
+                <input id="nomeModelo" type="text">
+                <select id="select-marcas" name="select-marcas" required="true">
+                    <option value="">Selecione a Marca</option>
+                </select>
+                <span class="erro"> </span>
+                <button id="btn-cadastrarModelo">Cadastrar</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/CadastroMarcaVeiculos.js"></script>
+    <script src="js/cadastroModeloVeiculos.js"></script>
+    <script src="js/cadastroVeiculos.js"></script>
+    
+</body>
+
+</html>
