@@ -28,6 +28,7 @@
         <section class="principal principalCadVeiculos">
             <h1>Cadastro de Veículo</h1>
             <form class="flex-center">
+                <label for="id" value="10"></label>
                 <select id="marcas" name="marcas" >
                     <option value="">Selecione a Marca</option>
                 </select>
@@ -42,18 +43,19 @@
                 </select>
 
                 <label for="kmVeiculo">KM</label>
-                <input id="kmVeiculo" type="text" name="kmVeiculo">
+                <input id="kmVeiculo" type="number" name="kmVeiculo" min="1">
 
                 <label for="imagemVeiculos"></label>
-                <input id="imagemVeiculo" name="imagemVeiculo" type="file" accept=".jpg,.gif,.png">
+                <input id="imagemVeiculo" name="imagemVeiculo" type="file" accept=".jpg,.gif,.png,.jpeg">
 
                 <label for="valorVeiculo">Valor R$</label>
-                <input id="valorVeiculo" name="valorVeiculo" type="number">
+                <input id="valorVeiculo" name="valorVeiculo" type="number" min="1">
 
                 <span class="erro"> </span>
                 <button id="btn-cadastrarVeiculo">Cadastrar</button>
             </form>
         </section>
+
     </main>
     <script src="js/CadastroMarcaVeiculos.js"></script>
     <script src="js/cadastroModeloVeiculos.js"></script>

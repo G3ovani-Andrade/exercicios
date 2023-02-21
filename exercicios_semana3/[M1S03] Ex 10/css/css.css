@@ -98,18 +98,21 @@ select{
     padding: 5px;
  }
  .imgCard{
-    width: 80%;
+    height: 178px;
+    max-width: 90%;
+    max-height: 90%;
     border-radius: 5px;
  }
  .listaVeiculos>div{
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center;
     padding: 10px;
     border-radius: 10px;
     background: white;
-    box-sizing: border-box;
+    justify-content: space-between;
+
  }
  .listaVeiculos>div>div{
     display: flex;
@@ -122,4 +125,6 @@ select{
  b{
     font-weight: 900;
  }
-
+.Vendido{
+    border: 1px solid red;
+}
