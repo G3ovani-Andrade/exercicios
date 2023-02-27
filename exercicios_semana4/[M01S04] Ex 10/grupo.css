@@ -1,0 +1,55 @@
+.menuVoltar{
+    display: flex;
+    align-items: center;
+}
+
+.menuVoltar a{
+    text-decoration:none;
+    cursor: pointer;
+    margin-right: 4rem;
+}
+.menuVoltar a:visited{
+    color: white;
+}
+main{
+    width: 100%;
+    margin: 0 auto;
+}
+.gridTabelaHeader{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    color: white;
+    margin: 2rem auto 0.5rem;
+    
+}
+.gridTabelaLinha{
+    width: 90%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    color: white;
+    margin: 0.3rem auto;
+    background: #1A1C22;
+    padding: 0.5rem;
+    border-radius: 5px;
+    
+}
+.gridTabelaHeader>p:nth-child(n+2):nth-child(-n+3){
+    text-align: center;
+}
+.gridTabelaLinha>p:nth-child(n+2):nth-child(-n+3){
+    text-align: center;
+}
+
+
+.alerta{
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    display: none;
+    color: #155724;
+    background-color: #d4edda;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}

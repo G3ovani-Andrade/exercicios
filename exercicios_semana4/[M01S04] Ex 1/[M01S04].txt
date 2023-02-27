@@ -1,0 +1,10 @@
+let oi = "escopo Global";
+function escopoFuncao(){
+  console.log("Escopo de Função");
+}
+escopoFuncao();
+if(true){
+  let oi = "Escopo de bloco";
+  console.log(oi);
+}
+console.log(oi);

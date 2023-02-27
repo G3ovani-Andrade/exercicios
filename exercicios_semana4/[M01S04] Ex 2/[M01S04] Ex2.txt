@@ -1,0 +1,6 @@
+Var – repeita os escopos de função e global, seu valor pode ser atualizado, pode ser declarada mais de uma vez, sofre hoisting e pode ser inicializada sem declaração mas seu valor fica como undefine
+
+Let – respeita os 3 escopos(bloco, função, global),se valor pode ser atualizado, não pode ser declarada mais de uma vez, sofre hoisting e pode ser inicializada sem declaração.
+
+Const – repeita os escopos de função e global, seu valor não pode ser atualizado, não pode ser declarada mais de uma vez, sofre hoisting e não pode ser 
+Inicializada sem declaração.

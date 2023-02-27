@@ -1,0 +1,2 @@
+Objetos são estruturas que agrupam características e comportamentos onde as características são chamadas de atributos e os comportamentos são chamados de métodos.
+as classes são usadas para facilitar a manutenção, legibilidade, upgrade, organização e evitar reescrita de códigos.

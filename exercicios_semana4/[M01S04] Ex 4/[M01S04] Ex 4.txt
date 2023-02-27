@@ -1,0 +1,6 @@
+ForEach  Serve para percorrer o array e executar uma função para cada elemento do array
+map Percorre o array, executa uma ação e retorna um novo array
+filter percorre o array e retorna um novo array filtrado
+find percorre o array e retorna o primeiro elemento que passa em um teste
+reduce percorre cada elemento do array executando uma somatória dos elementos
+every testa todos os elementos de um array e retorna true ou false

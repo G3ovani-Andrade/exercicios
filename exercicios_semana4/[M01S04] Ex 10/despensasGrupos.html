@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despesas em Grupo</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="./FormModal/index.css" />
+  <link rel="stylesheet" href="grupo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="menuVoltar">
+      <a href="index.html">Voltar</a>
+      <h1>Despesas em Grupo</h1>
+    </div>
+    <button id="open-modal-button">Adicionar despesa</button>
+
+
+    <!-- The Modal -->
+    <div id="form-modal" class="modal">
+      <div id="alertaModal" class="alerta">
+        <p>Cadastrado com Sucesso</p>
+      </div>
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Nova Despesa Em Grupo</h3>
+          <img src="/images/close.svg" alt="Fechar modal" onclick="closeModal()" />
+        </div>
+
+        <div class="input-wrapper">
+          <label for="tituloDespesa"><b>Título</b></label>
+          <input type="text" placeholder="Título" name="tituloDespesa" id="tituloDespesa" required="true" />
+        </div>
+        <div class="input-wrapper">
+          <label for="numeroparticipantes"><b>Numero de Participantes</b></label>
+          <input type="number" placeholder="2" min="2" name="numeroparticipantes" id="numeroparticipantes" required />
+        </div>
+        <div class="input-wrapper">
+          <label for="valorTotal"><b>Valor Total</b></label>
+          <input type="number" placeholder="50" min="1" name="value" id="valorTotal" required />
+        </div>
+        <button type="submit" onclick="addDespesaEmGrupo()" id="addDespesaEmGrupo"
+          class="add-new-financial-movement-button">
+          Adicionar
+        </button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="despesasEmGrupo">
+      <div class="gridTabelaHeader">
+        <p>Titulo da despesa</p>
+        <p>minha parte</p>
+        <p>valor total</p>
+      </div>
+      <!-- <div class="gridTabelaLinha">
+        <p>Energia Eletrica</p>
+        <p>R$ 40</p>
+        <p>R$ 120</p>
+      </div>
+      <div class="gridTabelaLinha">
+        <p>Energia Eletrica</p>
+        <p>R$ 40</p>
+        <p>R$ 120</p>
+      </div>
+      <div class="gridTabelaLinha">
+        <p>Energia Eletrica</p>
+        <p>R$ 40</p>
+        <p>R$ 120</p>
+      </div> -->
+    </div>
+
+
+
+  </main>
+  <!-- <script src="./index.js"></script> -->
+  <script src="./FormModal/index.js"></script>
+  <script src="despesasEmGrupo.js"></script>
+</body>
+
+</html>
