@@ -1,14 +1,9 @@
 
 function listarVeiculosCadastrados() {
-    let foiVendido = "Vender";
+    var contador = 0;
     for (const veiculo of veiculos) {
-        console.log(veiculo.foiVendido);
-        if (veiculo.foiVendido === true) {
-            foiVendido = "Vendido";
-            
-        }
         container.innerHTML += `
-        <div class="${foiVendido}">
+        <div class="banner">
             <label id="${veiculo.id}"></label>
             <img class="imgCard" src="${veiculo.imagem}" onerror = "this.src = 'imgs/fiatPunto.jpeg'" alt="imagem veiculo" srcset="">
             <h1>${veiculo.marca} ${veiculo.modelo}</h1>
@@ -19,10 +14,24 @@ function listarVeiculosCadastrados() {
                 <p><b>Km:</b> ${veiculo.kmVeiculo}</p>
                 <p><b>Cor:</b> ${veiculo.cor}</p>
             </div>
-             <button class="vender">${foiVendido}</button>
         </div>
         `
-        foiVendido = "Vender";
+        var divModelo = document.getElementsByClassName('banner')[contador];
+        console.log(divModelo);
+        console.log(contador);
+        if (veiculo.foiVendido === true) {
+            var botao = document.createElement('button');
+            botao.className = '';
+            botao.innerText = "Vendido";
+            divModelo.appendChild(botao);
+            divModelo.className += " Vendido"
+        }else{
+            var botao = document.createElement('button');
+            botao.className = 'vender';
+            botao.innerText = "Vender";
+            divModelo.appendChild(botao);
+        }
+        contador++;
     }
 }
 const body = document.getElementsByTagName('body')[0];
