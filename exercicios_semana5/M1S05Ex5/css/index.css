@@ -1,0 +1,146 @@
+
+*{
+    font-family: 'Roboto', sem serifa;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+}
+main{
+    width: 80%;
+    margin: 15px auto;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+header h1{
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 1.5rem 0 0.5rem 1rem;
+}
+.formularioFilme{
+    padding: 1rem 1.5rem 2.5rem; 
+    align-items: center;
+}
+.secaoFormulario{
+    background: #FFCD29;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+input{
+    border: none;
+    border-radius: 3px;
+    background: #E6E6E6;
+    color: RGB(117,117,117);
+    font-size: 1.5rem;
+    width: 15%;
+    padding: 8px 10px;
+}
+.formularioFilme>input:first-child{
+    width: 40%;
+}
+button{
+    background: black;
+    color: white;
+    border-radius: 5px;
+    height: 2rem;
+    cursor: pointer;
+}
+input:focus{
+    outline: 0;
+}
+/*                                          Menu Pesquisa */
+.minutosAssistidos{
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    gap:2rem
+}
+h1{
+    font-size: 2.5rem;
+    margin: 14px 0;
+}
+.pesquisar input{
+    width: 100%;
+}
+
+/*                                                    Lista Filmes */
+.listaFilmes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3rem;
+    padding: 5px;
+    gap: 10px;
+}
+.cardFilme{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    /* background: RGB(189,227,255); */
+    /* background-color: RGB(13,153,255); */
+    background: #E6E6E6;
+    border-radius: 10px;
+    padding-bottom: 1.8rem;
+}
+.cardFilme img{
+    border-radius: 5px;
+}
+.botoesCard{
+    display: flex;
+    justify-content: space-between;
+}
+.button{
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 0 0.5rem;
+    background: white;
+    color: black;
+    border: none;
+}
+.buttonClicado{
+    background: black;
+    color: white;
+}
+
+.notaCard{
+    display: flex;
+    gap:1rem;
+    justify-content: end;
+    padding-right: 1rem;
+}
+.notaCard p{
+    margin-bottom: 0.2rem;
+}
+.tituloCard h3{
+    margin: 1rem;
+    font-size: 2rem;
+}
+/*                                                    alertas */
+.sucesso{
+    width: 100%;
+    color: #155724;
+    background-color: #d4edda;
+    position: fixed;
+    top :0;
+    text-align: center;
+    display: none;
+}
+.erro{
+    width: 100%;
+    color: #721c24;
+    background-color: #f8d7da;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    display: none;
+}
+/*                                                    icone favorito */
+.favoritos{
+    display: flex;
+    position:absolute;
+    z-index: 1;
+    margin: 1rem 1rem;
+}
