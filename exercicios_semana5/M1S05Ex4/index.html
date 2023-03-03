@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+</head>
+
+<body>
+    <div class="erro">
+        <p>Título já existe</p>
+    </div>
+    <div class="sucesso">
+        <p>Filme adicionado com sucesso</p>
+    </div>
+    <main class="main">
+        <header class="secaoFormulario">
+            <div>
+                <h1>Adicionar filme</h1>
+                <div class="flex formularioFilme">
+                    <input id="titulo" type="text" placeholder="Título">
+                    <input id="duracao" type="text" placeholder="duração" required>
+                    <input id="nota" min="1" max="10" type="number" placeholder="nota" required>
+                    <button id="btnCadastrarFilme">Cadastrar</button>
+                </div>
+            </div>
+        </header>
+        <section class="minutosAssistidos">
+            <h1>Filmes</h1>
+            <p>Total de <span>20 Min</span> Assistidos</p>
+        </section>
+        <section class="pesquisar">
+            <div>
+                <input id="pesquisaFilmes" type="text" placeholder="pesquisar ...">
+            </div>
+        </section>
+        <section id="listaFilmes" class="listaFilmes">
+            <div class="cardFilme">
+                <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+                    alt="">
+                    <div class="notaCard">
+                        <p>Nota</p>
+                        <p>duração</p>
+                    </div>
+                    <div class="tituloCard">
+                        <h3>Titulo</h3>
+                    </div>
+                    <div class="botoesCard">
+                        <button class="button">Assistido</button>
+                        <button class="button">favorito</button>
+                    </div>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
