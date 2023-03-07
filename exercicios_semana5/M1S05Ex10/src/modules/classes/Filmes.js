@@ -3,9 +3,14 @@ class Filme {
         this.titulo = titulo;
         this.duracao = duracao;
         this.nota = nota;
-        this.assistido = assistido;
-        this.favorito = favorito;
+        // this.assistido = assistido;
+        // this.favorito = favorito;
     }
 }
-
-export {Filme}
+let filmes =[
+    new Filme("Mib", 150, 10, false, false),
+    new Filme("Meu malvado Favorito", 150, 9, false, false),
+    new Filme("Chuck", 150, 8, false, false),
+    new Filme("monstros SA", 150, 7, false, true),
+];
+export {Filme,filmes}

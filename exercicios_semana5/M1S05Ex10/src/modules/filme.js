@@ -1,9 +1,10 @@
+import { alertaForm } from "./utils.js";
+import { Filme,filmes} from "./classes/Filmes.js";
+import { validarCampos,ciarEventoClic} from "./utils.js";
+
 const listarFilmes = (listaFilmes) => {
-    console.log(listaFilmes);
     if (listaFilmes.length == 0) {
-        alerta.innerHTML =
-            "<p>Não foi encontrado nenhum filmes com esse título</p>";
-        alertaForm();
+        alertaForm("<p>Não foi encontrado nenhum filmes com esse título</p>","erro");
     }
     document.getElementById("listaFilmes").innerHTML = listaFilmes.map((filme) =>
         `<div class="cardFilme">
@@ -12,7 +13,7 @@ const listarFilmes = (listaFilmes) => {
                 <img id="${filme.titulo}" src="${filme.favorito? "src/imagens/favorito/favorito.png": "src/imagens/favorito/noFavorito.png"}" alt="">
             </div>
             <div class="assistido">
-                <img src="${filme.assistido ? "src/imagens/assistido/visto.png": "src/imagens/assistido/naoVisto.png"}" alt="">
+                <img id="${filme.titulo}" src="${filme.assistido ? "src/imagens/assistido/visto.png": "src/imagens/assistido/naoVisto.png"}" alt="">
             </div>
             </div>
             <img src="https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U" alt="">
@@ -28,9 +29,19 @@ const listarFilmes = (listaFilmes) => {
         </div>`
     ).join("");
 };
-const buscarFilme = (listaFilmes, nomeFilme) =>{
+const filtrarFilmes= (listaFilmes, nomeFilme) =>{
     let filmeEscolhido = [];
     return filmeEscolhido = listaFilmes.filter((filme) =>filme.titulo.toLowerCase().includes(nomeFilme.toLowerCase()));
+}
+
+const buscarFilme = (listaFilmes, nomeFilme) =>{
+    let filmeEscolhido;
+    listaFilmes.filter((filme) =>{
+        if(filme.titulo.toLowerCase() === nomeFilme.toLowerCase()){
+            filmeEscolhido = filme;
+        }
+    })
+    return filmeEscolhido;
 }
 
 
@@ -41,22 +52,40 @@ const  adicionarFavorito = (listaFilmes,e)=>{
         }
         return total;
     },0)
-    console.log(totalFavoritos);
-    console.log(e.target.id);
     let novoFilme = buscarFilme(listaFilmes,document.getElementById(e.target.id).id);
-    console.log(novoFilme);
-   
     if(totalFavoritos<3){
-        // novoFilme[0].favorito ? (novoFilme[0].favorito = false) : (novoFilme[0].favorito = true);
-        novoFilme[0].favorito ? (novoFilme[0].favorito = false) : (novoFilme[0].favorito = true);
+        novoFilme.favorito ? (novoFilme.favorito = false) : (novoFilme.favorito = true);
     }else{
-        if(novoFilme[0].favorito == true){
-            novoFilme[0].favorito = false;
+        if(novoFilme.favorito == true){
+            novoFilme.favorito = false;
         }else{
-            return false;
             alertaForm("<p>Já existem três filmes favoritos</p>","erro");
-        }
-        
+        } 
     }
 }
-export {listarFilmes,buscarFilme,adicionarFavorito};
+
+const cadastrarFilme = () => {
+    let filme = new Filme(titulo.value,Number(duracao.value),Number(nota.value));
+    filme.favorito = false;
+    filme.assistido = false;
+    filme.imagem = "https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U";
+    if (validarCampos()) {
+        if (buscarFilme(filmes,titulo.value)) {
+            alertaForm("<p>Já existe um filme com esse título</p>","erro");
+        } else {
+            alertaForm("<p>Filme adicionado com sucesso</p>","sucesso");
+            titulo.value = "";
+            duracao.value = "";
+            nota.value = "";
+            filmes.push(filme);
+        }
+    }
+};
+function adicionarAssistido(e){
+    const novoFilme = buscarFilme(filmes,document.getElementById(e.target.id).id);
+    novoFilme.assistido ? (novoFilme.assistido = false) : (novoFilme.assistido = true);
+    listarFilmes(filmes);
+}
+
+
+export {listarFilmes,buscarFilme,adicionarFavorito,filtrarFilmes,cadastrarFilme,adicionarAssistido};
